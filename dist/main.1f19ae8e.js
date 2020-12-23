@@ -119,16 +119,25 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"main.js":[function(require,module,exports) {
 var demo = document.querySelector('.demo');
-var string = "\u4F60\u597D\uFF0C\u6211\u662F\u4E00\u540D\u524D\u7AEF\u5C0F\u767D";
-var n = 0; // demo.innerHTML = string.substring(0,n);
+var string = "\n\u4F60\u597D\uFF0C\u6211\u662F\u4E00\u540D\u524D\u7AEF\u5C0F\u767D\n\u63A5\u4E0B\u6765\u6211\u8981\u52A0\u6837\u5F0F\u4E86\nbody{\n  color:red;\n}\n";
+var n = 0;
+var string2 = ''; // demo.innerHTML = string.substring(0,n);
 
 var step = function step() {
   setTimeout(function () {
     n++;
-    demo.innerHTML = string.substring(0, n);
-    if (n >= string.length) return;
+
+    if (string[n] === '\n') {
+      string2 += '<br>';
+    } else {
+      string2 = string2 + string[n];
+    }
+
+    console.log(string2);
+    demo.innerHTML = string2;
+    if (n >= string.length - 1) return;
     step();
-  }, 400);
+  }, 100);
 };
 
 step();
