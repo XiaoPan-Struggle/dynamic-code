@@ -94,7 +94,7 @@ let step = () => {
     window.scroll(0,9999)
     if(n >= string.length-1) return
     step()
-  },0)
+  },20)
 }
 
 step()
