@@ -3,7 +3,7 @@ let string = `
 你好，我是一名前端小白
 接下来我要加样式了
 body{
-  color:red;
+  color: red;
 }
 `
 let n = 0
@@ -16,8 +16,9 @@ let step = () => {
     n ++
     if(string[n] === '\n'){
       string2 += '<br>'
-    }
-    else{
+    } else if(string[n] === ' '){
+      string2 += '&nbsp;'
+    } else{
       string2 = string2 + string[n]
     }
     console.log(string2)

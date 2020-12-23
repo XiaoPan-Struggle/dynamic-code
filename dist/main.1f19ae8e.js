@@ -119,7 +119,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"main.js":[function(require,module,exports) {
 var demo = document.querySelector('.demo');
-var string = "\n\u4F60\u597D\uFF0C\u6211\u662F\u4E00\u540D\u524D\u7AEF\u5C0F\u767D\n\u63A5\u4E0B\u6765\u6211\u8981\u52A0\u6837\u5F0F\u4E86\nbody{\n  color:red;\n}\n";
+var string = "\n\u4F60\u597D\uFF0C\u6211\u662F\u4E00\u540D\u524D\u7AEF\u5C0F\u767D\n\u63A5\u4E0B\u6765\u6211\u8981\u52A0\u6837\u5F0F\u4E86\nbody{\n  color: red;\n}\n";
 var n = 0;
 var string2 = ''; // demo.innerHTML = string.substring(0,n);
 
@@ -129,6 +129,8 @@ var step = function step() {
 
     if (string[n] === '\n') {
       string2 += '<br>';
+    } else if (string[n] === ' ') {
+      string2 += '&nbsp;';
     } else {
       string2 = string2 + string[n];
     }
