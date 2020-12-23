@@ -1,15 +1,18 @@
-let demo = document.querySelector('.demo')
+let html = document.querySelector('.html')
+let style = document.querySelector('.style')
+
+
 let string = `
-你好，我是一名前端小白
-接下来我要加样式了
+/*你好，我是一名前端小白
+* 接下来我要加样式了
+**/
 body{
   color: red;
 }
 `
+
 let n = 0
 let string2 = ''
-
-// demo.innerHTML = string.substring(0,n);
 
 let step = () => {
   setTimeout(() => {
@@ -21,8 +24,8 @@ let step = () => {
     } else{
       string2 = string2 + string[n]
     }
-    console.log(string2)
-    demo.innerHTML = string2
+    html.innerHTML = string2
+    style.innerHTML = string.substring(0,n)
     if(n >= string.length-1) return
     step()
   },100)
