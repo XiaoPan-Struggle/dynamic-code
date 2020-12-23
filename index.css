@@ -8,3 +8,15 @@
 *::after {
   display: block;
 }
+.box::before {
+  position: absolute;
+}
+.box::after {
+  position: absolute;
+}
+.box {
+  position: fixed;
+}
+.html {
+  padding-left: 50px;
+}
