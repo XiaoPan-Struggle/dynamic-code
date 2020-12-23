@@ -4,11 +4,10 @@ let style = document.querySelector('.style')
 
 let string = `
 /*你好，我是一名前端小白
-* 接下来我要加样式了
+* 接下来我要开始表演了
+* 如何做一个太极
+* 首先我们准备一个 div
 **/
-body{
-  color: red;
-}
 `
 
 let n = 0
