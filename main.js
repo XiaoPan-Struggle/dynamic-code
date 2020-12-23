@@ -68,7 +68,12 @@ let string = `
 }
 /* 
 * 这样就完成太极制作过程啦
+* 接下来我们让太极转起来吧！！！
 */
+.box {
+  animation: SpinTaiJi 3.8s infinite linear;
+}
+
 `
 
 let n = 0
